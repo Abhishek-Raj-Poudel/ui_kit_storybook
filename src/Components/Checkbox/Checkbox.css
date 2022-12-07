@@ -1,0 +1,15 @@
+.checkbox_label {
+  display: flex;
+  gap: 12px;
+  font-size: 16px;
+}
+
+.checkbox {
+  display: inline-block;
+  aspect-ratio: 1;
+  height: 24px;
+  border: 2px solid #bcbcbc;
+  border-radius: 2px;
+  cursor: pointer;
+  accent-color: aqua;
+}

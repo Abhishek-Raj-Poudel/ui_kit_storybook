@@ -1,0 +1,16 @@
+.badge {
+  max-width: fit-content;
+  padding: 1px 8px 1px 8px;
+  border-radius: 999px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.secondary {
+  color: #6e41e2;
+}
+.white {
+  color: #6e41e2;
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04),
+    0px 4px 16px rgba(51, 51, 51, 0.08);
+}

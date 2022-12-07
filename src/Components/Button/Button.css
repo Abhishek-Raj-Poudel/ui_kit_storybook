@@ -1,0 +1,173 @@
+:root {
+  --primary-color: #6e41e2;
+  --white: #ffffff;
+  --outline-color: #111111;
+  --disabled-opacity: 0.56;
+}
+.button {
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.primary_white:focus,
+.secondary:focus,
+.flat:focus,
+.flat_active:focus,
+.secondary_white:focus,
+.secondary_white_active:focus,
+.flat_white:focus,
+.flat_active:focus {
+  outline: 2px solid rgba(17, 17, 17, 0.48);
+}
+
+.primary_disabled,
+.primary_white_disabled,
+.secondary_disabled,
+.flat:disabled,
+.flat_disabled,
+.flat_white:disabled,
+.flat_white_active:disabled,
+.flat_white_disabled,
+.secondary_dark_disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.primary_white_disabled,
+.secondary_disabled,
+.flat:disabled,
+.flat_disabled,
+.flat_white:disabled,
+.flat_white_active:disabled,
+.flat_white_disabled,
+.secondary_dark_disabled {
+  opacity: var(--disabled-opacity);
+}
+
+.primary {
+  background-color: var(--primary-color);
+}
+.primary:hover {
+  background-color: #5835b0;
+}
+.primary:active,
+.primary_active {
+  background-color: #472c8a;
+}
+
+.primary_disabled {
+  background-color: #e3daf9;
+}
+
+.primary_white {
+  background-color: var(--white);
+  color: #6e41e2;
+}
+.primary_white:hover {
+  background-color: rgba(255, 255, 255, 0.88);
+}
+
+.primary_white:focus,
+.secondary:focus {
+  /* note this obsidian */
+  outline-color: rgba(17, 17, 17, 0.48);
+}
+.primary_white_disabled {
+  background-color: var(--white);
+  color: var(--primary-color);
+}
+
+.secondary,
+.secondary_disabled {
+  background: none;
+  outline: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.secondary:hover {
+  background-color: rgba(110, 65, 226, 0.04);
+  color: var(--primary-color);
+}
+.secondary:active,
+.secondary_active {
+  background-color: rgba(110, 65, 226, 0.16);
+  color: var(--primary-color);
+  outline: 2px solid var(--primary-color);
+}
+
+/* secondary and primary focus are same so lumped togather  */
+
+.secondary_white {
+  outline: 2px solid var(--white);
+  color: var(--white);
+}
+
+.secondary_white:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  outline: 2px solid var(--white);
+}
+
+.secondary_white:active,
+.secondary_white_active {
+  background-color: rgba(255, 255, 255, 0.16);
+  outline: 2px solid var(--white);
+}
+
+.secondary_white:focus,
+.secondary_white_active:focus {
+  color: var(--white);
+}
+
+.secondary_white_disabled {
+  outline: 2px solid var(--white);
+  opacity: var(--disabled-opacity);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.flat,
+.flat_active {
+  color: var(--primary-color);
+}
+.flat:hover {
+  background: rgba(110, 65, 226, 0.04);
+}
+
+.flat:active,
+.flat_active {
+  background: rgba(110, 65, 226, 0.16);
+}
+
+.flat_white,
+.flat_white_active {
+  color: var(--white);
+}
+.flat_white:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.flat:active,
+.flat_white_active {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+/* secondary dark */
+.secondary_dark,
+.secondary_dark_active,
+.secondary_dark_disabled {
+  outline: 2px solid var(--outline-color);
+  color: var(--outline-color);
+}
+
+.secondary_dark:hover {
+  background: rgba(17, 17, 17, 0.04);
+}
+.secondary_dark_active {
+  background: rgba(17, 17, 17, 0.12);
+}
