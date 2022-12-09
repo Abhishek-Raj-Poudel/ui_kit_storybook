@@ -13,7 +13,7 @@ export default {
 
 const Template = (args) => <Checkbox {...args} />;
 
-export const default_Checkbox = Template.bind({});
+export const checkbox_default = Template.bind({});
 
 export const checkbox_active = Template.bind({});
 checkbox_active.args = {

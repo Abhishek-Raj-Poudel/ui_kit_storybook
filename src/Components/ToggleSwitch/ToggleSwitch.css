@@ -1,0 +1,96 @@
+:root {
+  --primary-color: #6e41e2;
+  --primary-hover: #5835b0;
+}
+
+.toggle_label {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+}
+.subtitle {
+  font-size: 13px;
+  color: rgba(17, 17, 17, 0.48);
+}
+
+.toggle {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  height: 24px;
+  aspect-ratio: 2 / 1;
+  border: 2px solid #e3daf9;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 60ms all ease-in-out;
+}
+
+.toggle::before {
+  content: "";
+  width: 16px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  margin-left: 2px;
+}
+
+.toggle::after {
+  content: "";
+  width: 12px;
+  aspect-ratio: 1;
+  border: 2px solid #e3daf9;
+  border-radius: 50%;
+  opacity: 0.56;
+}
+
+.toggle:hover::before {
+  background-color: var(--primary-hover);
+}
+
+.toggle:disabled {
+  opacity: 0.56;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.toggle:focus {
+  border-color: rgba(17, 17, 17, 0.48);
+  outline: none;
+}
+
+.toggle:checked {
+  flex-direction: row-reverse;
+  background-color: var(--primary-color);
+  border: none;
+}
+
+.toggle:checked::before {
+  margin-right: 4px;
+  margin-left: 0;
+  background-color: white;
+}
+
+.toggle:checked::after {
+  background: white;
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  border: none;
+  border-radius: 0;
+  width: 10px;
+  opacity: 1;
+  margin-right: 3px;
+}
+
+.toggle:checked:hover {
+  background-color: var(--primary-hover);
+}
+
+.toggle:checked:focus {
+  border: 2px solid rgba(17, 17, 17, 0.48);
+}
+
+.toggle:checked:focus::before {
+  margin-right: 2.5px;
+}
