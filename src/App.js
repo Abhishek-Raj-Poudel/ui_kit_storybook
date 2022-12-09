@@ -1,9 +1,10 @@
+import Checkbox from "./Components/Checkbox/Checkbox";
 import Input from "./Components/Input/Input";
 
 function App() {
   return (
     <div className="App">
-      <Input size="small" placeholder="Small size" />
+      <Checkbox variant="default">Text</Checkbox>
     </div>
   );
 }

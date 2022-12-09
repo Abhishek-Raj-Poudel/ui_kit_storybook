@@ -1,0 +1,55 @@
+.radio_label {
+  font-weight: 500;
+  display: grid;
+  place-items: center start;
+  grid-template-columns: 1rem auto;
+  gap: 12px;
+}
+
+.radio_label_disabled,
+.radio_button:disabled {
+  opacity: 0.56;
+}
+
+.radio_button {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #e3daf9;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 24px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+.radio_button:hover {
+  background-color: #6e41e2;
+  opacity: 0.56;
+}
+
+.radio_button:checked {
+  background-color: #6e41e2;
+}
+.radio_button:checked:hover {
+  background-color: #5835b0;
+  opacity: 1;
+}
+
+.radio_button::before {
+  content: "";
+  width: 10px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 60ms transform ease-in-out;
+  box-shadow: inset 1rem 1rem #ffffff;
+}
+
+.radio_button:checked::before {
+  transform: scale(1);
+}
+
+/* https://moderncss.dev/pure-css-custom-styled-radio-buttons/ */

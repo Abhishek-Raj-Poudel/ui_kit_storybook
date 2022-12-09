@@ -1,15 +1,72 @@
 .checkbox_label {
-  display: flex;
-  gap: 12px;
-  font-size: 16px;
+  font-weight: 500;
+  display: grid;
+  place-items: center start;
+  grid-template-columns: 1rem auto;
+  gap: 10px;
 }
 
 .checkbox {
-  display: inline-block;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 20px;
   aspect-ratio: 1;
-  height: 24px;
-  border: 2px solid #bcbcbc;
-  border-radius: 2px;
-  cursor: pointer;
-  accent-color: aqua;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+
+  display: grid;
+  place-content: center;
 }
+
+.checkbox:hover {
+  background-color: #fafafa;
+}
+
+.checkbox_active > .checkbox {
+  background-color: #f1f1f1;
+}
+
+.checkbox_disabled,
+.checkbox:disabled {
+  opacity: 0.56;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.checkbox_error {
+  color: #db524e;
+}
+
+.checkbox_error > .checkbox {
+  background-color: #f9e3e3;
+  border: none;
+}
+
+/* outer color */
+.checkbox::before {
+  content: "";
+  width: 16px;
+  aspect-ratio: 1;
+  border-radius: 4px;
+  transform: scale(0);
+  transition: 60ms transform ease-in-out;
+}
+
+.checkbox:checked::before {
+  box-shadow: inset 1em 1em #6e41e2;
+  transform: scale(1);
+}
+.checkbox:checked:hover::before {
+  box-shadow: inset 1em 1em #5835b0;
+  transform: scale(1);
+}
+
+/* Focus */
+.checkbox:focus {
+  outline-color: rgba(17, 17, 17, 0.48);
+}
+
+/* Custom checkbox from here */
+/* https://moderncss.dev/pure-css-custom-checkbox-style/ */
