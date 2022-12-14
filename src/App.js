@@ -1,5 +1,4 @@
 import Checkbox from "./Components/Checkbox/Checkbox";
-import Input from "./Components/Input/Input";
 
 function App() {
   return (

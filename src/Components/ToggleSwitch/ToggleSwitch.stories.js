@@ -1,7 +1,7 @@
 import React from "react";
 import ToggleSwitch from "./ToggleSwitch";
 export default {
-  title: "Form/Input/Toggle",
+  title: "Form/Toggle",
   component: ToggleSwitch,
   args: {
     variant: "default",

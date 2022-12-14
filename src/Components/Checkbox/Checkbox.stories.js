@@ -2,7 +2,7 @@ import React from "react";
 import Checkbox from "./Checkbox";
 
 export default {
-  title: "Form/Input/Checkbox",
+  title: "Form/Checkbox",
   component: Checkbox,
   args: {
     children: "Text",
